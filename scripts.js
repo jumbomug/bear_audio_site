@@ -68,12 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxNext = document.querySelector('.lightbox-next');
 
   function updateImage(index) {
-    currentImageIndex = index;
-    galleryImage.src = images[currentImageIndex];
-    if (lightbox.style.display === 'block') {
-      lightboxImage.src = images[currentImageIndex];
-    }
-    updateActiveThumbnail();
+    galleryImage.style.opacity = 0;
+    setTimeout(() => {
+      currentImageIndex = index;
+      galleryImage.src = images[currentImageIndex];
+      if (lightbox.style.display === 'block') {
+        lightboxImage.src = images[currentImageIndex];
+      }
+      galleryImage.style.opacity = 1;
+      updateActiveThumbnail();
+    }, 300); // Match the CSS transition duration
   }
 
   function updateActiveThumbnail() {
