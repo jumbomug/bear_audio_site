@@ -555,7 +555,7 @@ footer {
   display: block;
   cursor: pointer;
   object-fit: contain;
-  background-color: #000;
+  background-color: transparent;
 }
 
 .gallery-thumbnails {
