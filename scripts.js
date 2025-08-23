@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const body = document.querySelector('body');
+  setTimeout(() => {
+    body.classList.remove('loading');
+  }, 3000);
+
   // Header scroll effect
   const header = document.querySelector('.site-header');
   window.addEventListener('scroll', () => {

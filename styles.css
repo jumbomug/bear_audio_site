@@ -47,7 +47,7 @@ body {
   height: 80px;
   display: flex;
   align-items: center;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, opacity 0.5s ease-in-out;
 }
 
 .site-header.scrolled {
@@ -111,6 +111,7 @@ body {
   border-radius: 8px;
   max-width: 650px;
   text-align: center;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #bg-video {
@@ -652,4 +653,10 @@ footer {
 .lightbox-prev:hover,
 .lightbox-next:hover {
   background-color: rgba(0,0,0,0.8);
+}
+
+body.loading .site-header,
+body.loading .hero .overlay,
+body.loading .animated-section {
+  opacity: 0;
 }
