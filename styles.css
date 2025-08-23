@@ -47,7 +47,7 @@ body {
   height: 80px;
   display: flex;
   align-items: center;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, opacity 0.5s ease-in-out;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, opacity 1.5s ease-in-out;
 }
 
 .site-header.scrolled {
@@ -111,7 +111,7 @@ body {
   border-radius: 8px;
   max-width: 650px;
   text-align: center;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 
 #bg-video {
@@ -526,7 +526,7 @@ footer {
 .animated-section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .animated-section.is-visible {
