@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bear Audio – Quad Cab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#"><img src="Images/Raised Logo (1).png" alt="Bear Audio Logo" class="header-logo"/></a>
+      <nav class="main-nav">
+        <a href="#features">Features</a>
+        <a href="#customization">Customization</a>
+        <a href="#contact">Contact</a>
+        <a href="#preorder" class="cta-btn-nav">Pre-Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="Images/Bear Cab Render - Navy (Flipped 180).jpg" alt="Bear Cab Render - Navy" class="hero-image hero-image-left"/>
+      <img src="Images/Bear Cab Render - White.jpg" alt="Bear Cab Render - White" class="hero-image hero-image-right"/>
+      <div class="overlay">
+        <img src="Images/QCGIF.gif" alt="Quad Cab GIF" class="hero-gif"/>
+        <h2>INTRODUCING</h2>
+        <h1>QUAD CAB</h1>
+        <p>1x12” guitar cab with 4 rack units. Portable. Powerful. Built for the stage.</p>
+        <a href="#preorder" class="cta-btn">Pre-Order Now</a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Key Features</h2>
+      <div class="feature-row">
+        <div class="feature-text">
+          <h3>Built to Last</h3>
+          <p>Constructed with 13-ply, void-free Baltic Birch using glued channel joints for maximum strength. The Quad Cab is engineered to withstand the rigors of the road and the studio for a lifetime.</p>
+        </div>
+        <img src="Images/13 Ply Birch Plywood.jpg" alt="13 Ply Birch Plywood" class="feature-image"/>
+      </div>
+      <div class="feature-row reverse">
+        <div class="feature-text">
+          <h3>All-in-One Powerhouse</h3>
+          <p>
+            Powered by a 12" Eminence Swamp Thang speaker, known for its powerful, thick, and chunky tone with a tight, percussive feel. The Swamp Thang provides a tight, low response with a big bottom end and well balanced highs.
+            <br>
+            Key specifications include:
+            <ul>
+              <li>Nominal Basket Diameter: 12", 304.8mm</li>
+              <li>Nominal Impedance: 8 ohms</li>
+              <li>Power Rating: 150Wrms</li>
+              <li>Resonance: 52Hz</li>
+              <li>Usable Frequency Range: 70Hz - 5kHz</li>
+              <li>Sensitivity: 101.8dB</li>
+            </ul>
+            It's the perfect core for your all-in-one rig.
+          </p>
+        </div>
+        <img src="Images/Swamp_Thang--1_1024x1024@2x.jpg" alt="Eminence Swamp Thang" class="feature-image"/>
+      </div>
+    </section>
+
+    <section id="customization" class="customization">
+      <h2>Your Sound, Your Style</h2>
+      <p class="subtitle">Choose from a range of premium finishes and grill cloths to create a cab that's uniquely yours.</p>
+      <div class="options-container">
+        <div class="option-group">
+          <h3>Cabinet Finish</h3>
+          <div class="option-grid">
+            <div class="option-item"><div class="option-swatch tolex-navy"></div><h4>Navy Blue Tolex</h4><p>Classic and road-ready textured vinyl.</p></div>
+            <div class="option-item"><div class="option-swatch tolex-white"></div><h4>Bright White Tolex</h4><p>A bold, clean look with durable protection.</p></div>
+            <div class="option-item"><div class="option-swatch wood-kona"></div><h4>Kona Stained Birch</h4><p>A rich, dark stain showing the natural wood grain.</p></div>
+          </div>
+        </div>
+        <div class="option-group">
+          <h3>Grill Cloth</h3>
+          <div class="option-grid">
+            <div class="option-item"><div class="option-swatch grill-black"></div><h4>Black Jute Weave</h4><p>A timeless, durable cloth for a classic look.</p></div>
+            <div class="option-item"><div class="option-swatch grill-white"></div><h4>White Warp Weave</h4><p>A striking, modern look with excellent transparency.</p></div>
+            <div class="option-item"><div class="option-swatch grill-natural"></div><h4>Natural Jute Weave</h4><p>A rustic, organic texture for a vintage vibe.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-slider">
+        <button class="slider-button prev">&#8249;</button>
+        <img id="gallery-image" src="Images/IMG_7109.jpeg" alt="Gallery Image"/>
+        <button class="slider-button next">&#8250;</button>
+      </div>
+    </section>
+
+    <section class="tech-specs">
+      <h2>Tech Specs</h2>
+      <ul>
+        <li><span>Speaker</span><span>12" Eminence Swamp Thang</span></li>
+        <li><span>Configuration</span><span>1 x 12" Speaker Cab with 4U Rack</span></li>
+        <li><span>Power Handling</span><span>150W</span></li>
+        <li><span>Impedance</span><span>8 Ohms</span></li>
+        <li><span>Construction</span><span>13-ply Baltic Birch</span></li>
+      </ul>
+    </section>
+
+    <section class="signup" id="preorder">
+      <h2>Join the Waitlist</h2>
+      <p class="subtitle">Be the first to know when the Quad Cab is available for pre-order.</p>
+      <form>
+        <label for="waitlist-email" class="sr-only">Your Email</label>
+        <input type="email" id="waitlist-email" placeholder="your.email@example.com" required/>
+        <button type="submit">Notify Me</button>
+      </form>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p class="subtitle">Have questions? We'd love to hear from you.</p>
+      <form>
+        <div>
+          <label for="name" class="sr-only">Your Name</label>
+          <input type="text" id="name" placeholder="Your Name" required/>
+        </div>
+        <div>
+          <label for="contact-email" class="sr-only">Your Email</label>
+          <input type="email" id="contact-email" placeholder="your.email@example.com" required/>
+        </div>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bear Audio. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
