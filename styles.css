@@ -552,11 +552,8 @@ footer {
 
 .gallery-main img {
   width: 100%;
-  max-height: 450px;
   display: block;
   cursor: pointer;
-  object-fit: contain;
-  background-color: transparent;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -599,8 +596,6 @@ footer {
 .lightbox-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 1200px;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
