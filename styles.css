@@ -660,3 +660,8 @@ body.loading .hero .overlay,
 body.loading .animated-section {
   opacity: 0;
 }
+
+body.loading .site-header,
+body.loading .hero .overlay {
+  opacity: 0;
+}
