@@ -174,11 +174,16 @@ body {
 .features,
 .signup,
 .customization,
-.contact {
+.contact,
+.gallery,
+.tech-specs {
   padding: 6rem 2rem;
   max-width: 1000px;
   margin: auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  background-color: black;
 }
 
 .features h2, .signup h2, .customization h2, .contact h2, .tech-specs h2, .gallery h2 {
