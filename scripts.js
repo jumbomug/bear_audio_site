@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Header scroll effect
   const header = document.querySelector('.site-header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -8,6 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // On-scroll animations
+  const animatedSections = document.querySelectorAll('.animated-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  animatedSections.forEach(section => {
+    observer.observe(section);
+  });
+
+  // Enhanced Gallery
   const images = [
     "Images/IMG_7109.jpeg",
     "Images/13 Ply Birch Plywood.jpg",
@@ -25,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     "Images/IMG_7106.jpeg",
     "Images/IMG_7107.jpeg",
     "Images/IMG_7108.jpeg",
-    "Images/IMG_7109.jpeg",
     "Images/IMG_7110.jpeg",
     "Images/IMG_7111.jpeg",
     "Images/IMG_7112.jpeg",
@@ -43,20 +60,93 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleryImage = document.getElementById('gallery-image');
   const prevButton = document.querySelector('.slider-button.prev');
   const nextButton = document.querySelector('.slider-button.next');
+  const thumbnailsContainer = document.querySelector('.gallery-thumbnails');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const lightboxPrev = document.querySelector('.lightbox-prev');
+  const lightboxNext = document.querySelector('.lightbox-next');
 
-  function updateImage() {
+  function updateImage(index) {
+    currentImageIndex = index;
     galleryImage.src = images[currentImageIndex];
+    if (lightbox.style.display === 'block') {
+      lightboxImage.src = images[currentImageIndex];
+    }
+    updateActiveThumbnail();
   }
 
-  prevButton.addEventListener('click', () => {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    updateImage();
-  });
+  function updateActiveThumbnail() {
+    document.querySelectorAll('.gallery-thumbnails img').forEach((img, i) => {
+      img.classList.toggle('active', i === currentImageIndex);
+    });
+  }
 
-  nextButton.addEventListener('click', () => {
+  function showNextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
-    updateImage();
+    updateImage(currentImageIndex);
+  }
+
+  function showPrevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImage(currentImageIndex);
+  }
+  
+  function openLightbox(index) {
+    currentImageIndex = index;
+    lightbox.style.display = 'block';
+    lightboxImage.src = images[currentImageIndex];
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+
+  // Create thumbnails
+  if (thumbnailsContainer) {
+    images.forEach((src, index) => {
+      const thumb = document.createElement('img');
+      thumb.src = src;
+      thumb.alt = `Thumbnail ${index + 1}`;
+      thumb.addEventListener('click', () => updateImage(index));
+      thumbnailsContainer.appendChild(thumb);
+    });
+  }
+
+  // Event Listeners
+  if(prevButton)
+    prevButton.addEventListener('click', showPrevImage);
+  if(nextButton)
+    nextButton.addEventListener('click', showNextImage);
+  if(galleryImage)
+    galleryImage.addEventListener('click', () => openLightbox(currentImageIndex));
+  if(lightboxClose)
+    lightboxClose.addEventListener('click', closeLightbox);
+  if(lightboxPrev)
+    lightboxPrev.addEventListener('click', showPrevImage);
+  if(lightboxNext)
+    lightboxNext.addEventListener('click', showNextImage);
+
+  // Close lightbox on outside click
+  if(lightbox)
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  
+  // Keyboard navigation for lightbox
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'block') {
+      if (e.key === 'ArrowRight') {
+        showNextImage();
+      } else if (e.key === 'ArrowLeft') {
+        showPrevImage();
+      } else if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    }
   });
 
-  updateImage(); // Initial image load
+  updateImage(0); // Initial image load
 });
