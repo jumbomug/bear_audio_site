@@ -67,7 +67,7 @@ body {
 
 .hero {
   position: relative;
-  height: 50vh; /* Subtract header height */
+  height: 70vh; /* Subtract header height */
   color: var(--white);
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@ body {
 .hero .overlay {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+  padding: 4rem;
   border-radius: 8px;
   max-width: 650px;
   text-align: center;
