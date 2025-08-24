@@ -191,15 +191,15 @@ body {
 .signup,
 .customization,
 .contact,
-.gallery,
 .tech-specs {
-  padding: 6rem 2rem;
-  max-width: 1000px;
+  padding: 4rem; /* Match hero overlay padding */
+  max-width: 650px; /* Match hero overlay max-width */
   margin: auto;
   text-align: center;
   position: relative;
   z-index: 2;
-  background-color: var(--page-background);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  border-radius: 8px; /* Rounded corners */
 }
 
 .features h2, .signup h2, .customization h2, .contact h2, .tech-specs h2, .gallery h2 {
