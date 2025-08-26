@@ -30,9 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  
-});
-document.addEventListener('DOMContentLoaded', function() {
- 
+  const waitlistForm = document.querySelector('#preorder form');
+  if (waitlistForm) {
+    waitlistForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const container = waitlistForm.parentElement;
+      container.innerHTML = '<h3>Thanks for joining the waitlist!</h3><p>We\'ll notify you as soon as pre-orders are available.</p>';
+    });
+  }
 
+  const contactForm = document.querySelector('#contact form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const container = contactForm.parentElement;
+      container.innerHTML = '<h3>Thank you for your message!</h3><p>We\'ll get back to you as soon as possible.</p>';
+    });
+  }
 });
