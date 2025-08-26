@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bear Audio – Quad Cab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css?v=1.7"/>
+  <link rel="stylesheet" href="styles.css?v=1.8"/>
 </head>
 <body class="loading">
   <header class="site-header">
@@ -120,7 +120,7 @@
       <p class="subtitle">Be the first to know when the Quad Cab is available for pre-order.</p>
       <form>
         <label for="waitlist-email" class="sr-only">Your Email</label>
-        <input type="email" id="waitlist-email" placeholder="your.email@example.com" required/>
+        <input type="email" id="waitlist-email" placeholder="contact@bear-audio.com" required/>
         <button type="submit">Notify Me</button>
       </form>
     </section>
@@ -135,7 +135,7 @@
         </div>
         <div>
           <label for="contact-email" class="sr-only">Your Email</label>
-          <input type="email" id="contact-email" placeholder="your.email@example.com" required/>
+          <input type="email" id="contact-email" placeholder="contact@bear-audio.com" required/>
         </div>
         <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
@@ -144,7 +144,43 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Bear Audio. All rights reserved.</p>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Bear Audio</h3>
+        <p>Crafting fine <a href="#">audio products</a> for discerning musicians. Learn more about our mission and values.</p>
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/BearAudio" aria-label="Instagram"><img src="Images/instagram-placeholder.svg" alt="Instagram"></a>
+          <a href="https://www.youtube.com/BearAudio" aria-label="YouTube"><img src="Images/youtube-placeholder.svg" alt="YouTube"></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3 id="sitemap-label">Sitemap</h3>
+        <nav aria-labelledby="sitemap-label">
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#customization">Customization</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#preorder">Pre-Order</a></li>
+            <li><a href="#">Guitar Cabinets</a></li>
+            <li><a href="#">Music Gear</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-section">
+        <h3>Join Our Mailing List</h3>
+        <form aria-describedby="privacy-notice">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="contact@bear-audio.com">
+          <button type="submit">Subscribe</button>
+          <p id="privacy-notice" class="privacy-notice">We respect your privacy. <a href="#">Privacy Policy</a></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="accessibility-statement"><a href="#">Accessibility Statement</a></p>
+      <p>&copy; 2025 Bear Audio. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="scripts.js"></script>
